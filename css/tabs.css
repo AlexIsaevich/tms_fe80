@@ -1,2 +1,11 @@
 /* tabs section styling */
 
+.tabs__wrapper {
+    margin: 0 auto;
+    padding: 99px 15px 0 15px;
+    max-width: 1170px;
+}
+
+.tab__content {
+    display: none;
+}
