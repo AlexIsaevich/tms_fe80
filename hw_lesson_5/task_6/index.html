@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FE80 Homework 5 Task 6</title>
+
+        <style>
+            * {
+                font-family: 'Arial', sans-serif;
+            }
+
+            .flex-direction__row,
+            .flex-direction__column,
+            .flex-direction__combined,
+            .without-flex {
+                margin: 0 auto;
+            }
+
+            .flex-direction__row {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .flex-direction__row h1 {
+                justify-content: center;
+            }
+
+                .row__container {
+                    flex: 0 0 100%;
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .row__container div {
+                    flex: 0 0 120px;
+                    height: 120px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .row__container .gold {
+                    background-color: #ffd700;
+                }
+
+                .row__container .gold .text {
+                    color: #ffd700;
+                }
+
+                .row__container .silver {
+                    background-color: #c0c0c0;
+                }
+
+                .row__container .silver .text {
+                    color: #c0c0c0;
+                }
+
+                .row__container .bronze {
+                    background-color: #cd7f32;
+                }
+
+                .row__container .bronze .text {
+                    color: #cd7f32;
+                }
+
+                .row__container div .text {
+                    flex: 0 0 30px;
+                    height: 30px;
+                    font-size: 20px;
+                    font-weight: bold;
+                    border-radius: 50%;
+                    background-color: #000;
+                }
+
+            .flex-direction__column {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+
+                .column__container {
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                }
+
+                .column__container div:nth-child(1) {
+                    width: 600px;
+                    height: 360px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: flex-end;
+                }
+
+                .column__container div:nth-child(1) .gold {
+                    width: 120px;
+                    height: 120px;
+                    background-color: #ffd700;
+                }
+
+                .column__container div:nth-child(2) {
+                    width: 600px;
+                    height: 240px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: flex-end;
+                }
+
+                .column__container div:nth-child(2) .gold {
+                    width: 120px;
+                    height: 240px;
+                    position: relative;
+                    background-color: #ffd700;
+                }
+
+                .column__container div:nth-child(2) .gold::before {
+                    width: 120px;
+                    right: 120px;
+                    height: 240px;
+                    content: '';
+                    position: absolute;
+                    background-color: #c0c0c0;
+                }
+
+                .column__container div:nth-child(2) .gold::after {
+                    left: 120px;
+                    width: 120px;
+                    height: 120px;
+                    content: '';
+                    position: absolute;
+                    background-color: #cd7f32;
+                }
+
+                .column__container div:nth-child(2) .gold .text {
+                    width: 30px;
+                    height: 30px;
+                    position: relative;
+                    margin-bottom: 45px;
+                    color: #ffd700;
+                    font-size: 20px;
+                    line-height: 30px;
+                    font-weight: bold;
+                    border-radius: 50%;
+                    background-color: #000;
+                }
+
+                .column__container div:nth-child(2) .gold .text::before {
+                    right: 120px;
+                    width: 30px;
+                    height: 30px;
+                    content: '2';
+                    position: absolute;
+                    color: #c0c0c0;
+                    text-align: center;
+                    border-radius: 50%;
+                    background-color: #000;
+                }
+
+                .column__container div:nth-child(2) .gold .text::after {
+                    left: 120px;
+                    width: 30px;
+                    height: 30px;
+                    content: '3';
+                    position: absolute;
+                    z-index: 2;
+                    color: #cd7f32;
+                    text-align: center;
+                    border-radius: 50%;
+                    background-color: #000;
+                }
+
+            .flex-direction__combined {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+            }
+
+                .combined__container {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                .combined__container .first__row {
+                    height: 240px;
+                }
+
+                .combined__container .second__row {
+                    height: 360px;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: center;
+                }
+
+                .combined__container .second__row .silver {
+                    width: 120px;
+                    height: 240px;
+                    background-color: #c0c0c0;
+                }
+
+                .combined__container .second__row .silver .text {
+                    color: #c0c0c0;
+                }
+
+                .combined__container .second__row .gold {
+                    width: 120px;
+                    height: 360px;
+                    background-color: #ffd700;
+                }
+
+                .combined__container .second__row .gold .text {
+                    color: #ffd700;
+                }
+
+                .combined__container .second__row .bronze {
+                    width: 120px;
+                    height: 120px;
+                    background-color: #cd7f32;
+                }
+
+                .combined__container .second__row .bronze .text {
+                    color: #cd7f32;
+                }
+
+                .combined__container .second__row .silver,
+                .combined__container .second__row .gold,
+                .combined__container .second__row .bronze {
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                }
+
+                .combined__container .text {
+                    width: 30px;
+                    height: 30px;
+                    margin-bottom: 45px;
+                    font-size: 20px;
+                    text-align: center;
+                    font-weight: bold;
+                    line-height: 30px;
+                    border-radius: 50%;
+                    background-color: #000;
+                }
+
+            .without-flex {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="flex-direction__row">
+            <h1>Homework 5 Task 6 use flex-direction: row; only</h1>
+            <div class="row__container">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="row__container">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="row__container">
+                <div></div>
+                <div></div>
+                <div class="gold"></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="row__container">
+                <div></div>
+                <div class="silver"></div>
+                <div class="gold"></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="row__container">
+                <div></div>
+                <div class="silver">
+                    <div class="text">2</div>
+                </div>
+                <div class="gold">
+                    <div class="text">1</div>
+                </div>
+                <div class="bronze">
+                    <div class="text">3</div>
+                </div>
+                <div></div>
+            </div>
+        </div>
+        <br><br><br>
+        <div class="flex-direction__column">
+            <h1>Homework 5 Task 6 use flex-direction: column; only</h1>
+            <div class="column__container">
+                <div>
+                    <div class="gold"></div>
+                </div>
+                <div>
+                    <div class="gold">
+                        <div class="text">1</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br><br>
+        <div class="flex-direction__combined">
+            <h1>Homework 5 Task 6 use combination of flex-direction: row; and flex-direction: column;</h1>
+            <div class="combined__container">
+                <div class="first__row"></div>
+                <div class="second__row">
+                    <div class="silver">
+                        <div class="text">2</div>
+                    </div>
+                    <div class="gold">
+                        <div class="text">1</div>
+                    </div>
+                    <div class="bronze">
+                        <div class="text">3</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br><br><br>
+        <div class="without-flex">
+            <h1>Homework 5 Task 6 use simple image to compare</h1>
+            <img src="img/olympic.png">
+        </div>
+    </body>
+</html>
