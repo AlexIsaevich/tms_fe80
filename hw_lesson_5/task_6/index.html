@@ -541,5 +541,19 @@
             <h1>HW5 Task 6 6th implementation: use simple image to compare</h1>
             <img src="img/olympic.png">
         </div>
+
+        <div id="cube" style="width: 100px; height: 100px;"></div>
+
+        <div id="container" style="border: solid red 2px">
+            container
+        </div>
     </body>
+    <script>
+        document.getElementById("container").addEventListener("mouseover", function() {
+            document.getElementById("cube").style.backgroundColor = "yellow";
+        });
+        document.getElementById("container").addEventListener("mouseout", function() {
+            document.getElementById("cube").style.backgroundColor = "white";
+        });
+    </script>
 </html>
