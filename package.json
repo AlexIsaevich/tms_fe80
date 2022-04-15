@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/alexeyamirov/tms_fe80#readme",
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.4.1",
     "parcel": "^2.4.1",
     "sass": "^1.50.0"
   }
