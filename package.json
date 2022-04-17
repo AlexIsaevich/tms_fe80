@@ -2,11 +2,11 @@
   "name": "axit",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "source": "src/index.html",
   "scripts": {
     "start": "parcel",
-    "build": "parcel build"
+    "build": "parcel build",
+    "watch": "parcel serve src/index.html --open --port 3000"
   },
   "repository": {
     "type": "git",
