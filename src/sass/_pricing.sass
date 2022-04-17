@@ -1,0 +1,165 @@
+/* pricing section styling */
+
+.pricing
+    background-color: #f5f5f5
+
+.pricing__wrapper
+    margin: 0 auto
+    padding: 50px 15px
+    max-width: 1170px
+
+.pricing__title
+    padding: 54px 0
+    font-size: 36px
+    text-align: center
+    line-height: 42px
+    font-family: 'Raleway', sans-serif
+    font-weight: 400
+    text-transform: uppercase
+
+.pricing__separator
+    width: 170px
+    height: 0
+    margin: 0 auto
+    border: none
+    border-top: solid 1px #EC7979
+
+.pricing__subtitle
+    padding: 40px 0 79px
+    color: #86878B
+    font-size: 18px
+    text-align: center
+    font-family: 'Raleway', sans-serif
+    font-weight: 400
+    line-height: 21px
+
+.pricing__content 
+    display: flex
+    justify-content: space-between
+    text-align: center
+
+.pricing__item
+    display: flex
+    flex: 0 1 calc((100% - 90px) / 3)
+    margin: 15px 0
+    flex-direction: column
+    justify-content: flex-start
+
+.pricing__item
+    &:hover 
+        cursor: pointer
+        margin-top: -20px
+        transition: all 0.5s ease-in-out
+        filter: drop-shadow(0 4px 10px #d6d6d6)
+
+.pricing__item-title
+    color: #fff
+    margin: 1px 0
+    padding: 13px 0
+    font-size: 24px
+    font-family: 'Open Sans', sans-serif
+    font-weight: bold
+    line-height: 32px
+    border: 1px solid #f5f5f5
+    background-color: #333
+
+.pricing__item-cost
+    color: #fff
+    margin: 1px 0
+    padding: 28px 0
+    font-size: 36px
+    font-family: 'Raleway', sans-serif
+    font-weight: bold
+    line-height: 42px
+    border: 1px solid #f5f5f5
+    background-color: #333
+
+.pricing__item-description
+    margin: 1px 0
+    padding: 12px 0
+    color: #999
+    font-size: 18px
+    font-family: 'Raleway', sans-serif
+    font-weight: normal
+    line-height: 22px
+    border: 2px solid #f5f5f5
+    background-color: #333
+
+.pricing__list-item
+    margin: 0 1px 1px 1px
+    padding: 12px 0
+    color: #86878b
+    font-size: 18px
+    font-family: 'Raleway', sans-serif
+    font-weight: normal
+    line-height: 22px
+    text-transform: capitalize
+    border: 2px solid #f5f5f5
+    border-top: none
+    background-color: #fff
+
+@media (max-width: 1024px)
+    .pricing__wrapper
+        margin: 0 auto
+        padding: 50px 0
+        max-width: 1170px
+
+    .pricing__title
+        padding: 46px 0
+        font-size: 24px
+        line-height: 28px
+
+    .pricing__separator
+        width: 143px
+
+    .pricing__subtitle
+        padding: 32px 0
+        font-size: 14px
+        line-height: 16px
+
+    .pricing__content 
+        display: flex
+        justify-content: space-between
+        text-align: center
+
+    .pricing__item
+        flex: 0 1 calc((100% - 72px) / 3)
+        margin: 0 12px
+
+@media (max-width: 768px)
+    .pricing__wrapper
+        padding: 0 16px
+
+    .pricing__separator
+        width: 134px
+
+    .pricing__subtitle
+        padding: 24px 0
+
+    .pricing__content
+        flex-direction: column
+
+    .pricing__item
+        margin-bottom: 28px
+
+    .pricing__item-title
+        padding: 10px 0
+        font-size: 18px
+        line-height: 24px
+
+    .pricing__item-cost
+        padding: 23px 0
+        font-size: 24px
+        line-height: 28px
+
+    .pricing__item-description
+        margin: 1px 0
+        padding: 9px 0
+        font-size: 14px
+        line-height: 16px
+
+    .pricing__list-item
+        margin: 0 1px 1px 1px
+        padding: 9px 0
+        font-size: 14px
+        line-height: 16px

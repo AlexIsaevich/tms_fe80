@@ -74,7 +74,6 @@
 
 .tab__text 
     margin: 27px 0
-    max-width: 570px
     max-height: 210px
     overflow-y: auto
     font-size: 18px
@@ -104,10 +103,65 @@
         box-shadow: inset 0 0 10px #ab4949
         background-color: #ec7979
 
-.tab__image 
-    top: 0
-    right: 0
-    width: 470px
-    bottom: 0
-    position: absolute
-    background-repeat: no-repeat
+@media (max-width: 1024px)
+    .tabs__wrapper 
+        margin: 0 auto
+        padding: 60px 15px 0 15px
+
+    .tab__nav-btn 
+        flex: 0 0 172px
+
+    .tab__content 
+        margin: 0 0 0 82px
+
+    .tab__title 
+        padding: 29px 0 28px
+        font-size: 24px
+        line-height: 32px
+
+    .tab__text 
+        margin: 38px 0
+        max-width: 482px
+        max-height: 112px
+        font-size: 14px
+        line-height: 16px
+
+    .tab__button 
+        width: 232px
+        margin: 0 0 50px 0
+
+@media (max-width: 768px)
+    .tabs__wrapper 
+        margin: 0 auto
+        padding: 38px 16px 0
+
+    .tab__nav-btn 
+        flex: 0 0 calc(100% / 3)
+        font-size: 14px
+
+    .tab__content 
+        margin: 0 22px
+        background-image: none !important
+
+    .tab__title 
+        display: block
+        padding: 32px
+        font-size: 18px
+        line-height: 24px
+        text-align: center
+
+    .tab__text 
+        margin: 29px 0
+        max-width: 100%
+        max-height: unset
+        font-size: 13px
+        line-height: 15px
+        text-align: center
+
+    .tab__button 
+        width: 242px
+        margin: 0 auto 30px auto
+        display: block
+        font-size: 18px
+        line-height: 50px
+        position: static
