@@ -1,0 +1,219 @@
+/* pricing section styling */
+
+.banner
+    margin-top: 75px
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/header_banner_background.png)
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center center
+
+.banner__wrapper
+    margin: 0 auto
+    padding: 283px 20px 185px 20px
+    display: flex
+    justify-content: space-between
+    max-width: 1170px
+
+.banner__content-part
+    &:first-child
+        flex: 0 1 670px
+        margin-right: 30px
+
+.banner__logo
+    width: 270px
+    height: 100px
+    margin-bottom: 51px
+    background-size: 270px 100px
+    background-image: url(../img/axit_logo_large.png)
+    background-repeat: no-repeat
+    background-position: left center
+
+.banner__title
+    color: #fff
+    font-size: 48px
+    font-family: 'Raleway', sans-serif
+    font-weight: 500
+    line-height: 56px
+    text-transform: uppercase
+
+.banner__separator
+    margin: 55px 0 0 0
+    width: 170px
+    height: 0
+    border: none
+    border-top: solid 1px #fff
+
+.banner__subtitle
+    padding: 42px 0
+    max-width: 270px
+    color: #fff
+    font-size: 18px
+    text-align: left
+    font-family: 'Raleway', sans-serif
+    font-weight: 400
+    line-height: 21px
+
+.banner__download-button
+    width: 270px
+    display: block
+    padding: 0
+    color: #fff
+    font-size: 18px
+    font-family: 'Open Sans', sans-serif
+    font-weight: 600
+    line-height: 54px
+    text-align: center
+    cursor: pointer
+    border: 2px solid #fff
+    background-color: transparent
+    transition: all 0.3s
+
+    &:hover 
+        color: #ec7979
+        border-color: #ec7979
+
+    &:active 
+        color: #fff
+        border-color: #ab4949
+        background-color: #ab4949
+
+.banner__form-container
+    width: 470px
+    border-radius: 10px
+    background-color: #fff
+
+.banner__form-items
+    padding: 0 50px
+
+.banner__form-title
+    padding: 29px 0 75px 0
+    color: #333
+    font-size: 24px
+    font-family: 'Open Sans', sans-serif
+    font-weight: 600
+    line-height: 33px
+    text-align: center
+    text-transform: uppercase
+
+    span
+        color: #ec7979
+
+.banner__form-items
+    input[type="text"],
+    input[type="email"]
+        margin-bottom: 33px
+
+    input[type="password"]
+        margin-bottom: 75px
+
+.banner__button
+    width: 100%
+    display: block
+    padding: 0
+    color: #fff
+    font-size: 15px
+    font-family: 'Open Sans', sans-serif
+    font-weight: 600
+    line-height: 58px
+    cursor: pointer
+    border: none
+    border-radius: 0 0 10px 10px
+    background-color: #ec7979
+    transition: all 0.3s
+
+    &:hover 
+        background-color: #ab4949
+
+    &:active 
+        box-shadow: inset 0 0 10px #ab4949
+        background-color: #ec7979
+
+@media (max-width: 1024px)
+    .banner__wrapper
+        margin: 0 auto
+        padding: 137px 20px 106px 20px
+        max-width: 1170px
+
+    .banner__content-part
+        &:first-child
+            flex: 0 1 454px
+            margin-right: 36px
+
+    .banner__logo
+        width: 183px
+        height: 75px
+        margin-bottom: 38px
+        background-size: 183px 75px
+
+    .banner__title
+        font-size: 36px
+        line-height: 42px
+
+    .banner__separator
+        margin: 42px 0 0 0
+        width: 115px
+
+    .banner__subtitle
+        padding: 42px 0
+        max-width: 183px
+        font-size: 14px
+        line-height: 16px
+
+    .banner__download-button
+        width: 183px
+        line-height: 46px
+
+    .banner__form-container
+        width: 398px
+
+    .banner__form-title
+        padding: 33px 0 78px 0
+        color: #333
+        font-size: 18px
+        line-height: 25px
+
+@media (max-width: 768px)
+    .banner
+        margin-top: 56px
+
+    .banner__wrapper
+        margin: 0 auto
+        padding: 84px 16px 50px 16px
+        flex-direction: column
+
+    .banner__content-part
+        &:first-child
+            flex: 0 0 auto
+            margin-right: 0
+
+    .banner__logo
+        display: none
+
+    .banner__title
+        text-align: center
+
+    .banner__separator
+        margin: 44px auto 0 auto
+        width: 134px
+
+    .banner__subtitle
+        padding: 42px 0
+        max-width: 100%
+        text-align: center
+
+    .banner__download-button
+        width: 100%
+        max-width: 288px
+        margin: 0 auto
+
+    .banner__form-container
+        width: 288px
+        margin: 56px auto 50px auto
+
+    .banner__form-items
+        padding: 0 24px
+
+    .banner__form-title
+        padding: 35px 0 36px 0
+        font-size: 14px
+        line-height: 19px
