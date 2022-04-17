@@ -1,98 +1,105 @@
-/* pricing section styling */
+/* menu section styling */
 
-.pricing
-    background-color: #f5f5f5
+.menu
+    top: 0
+    left: 0
+    right: 0
+    height: 75px
+    position: fixed
+    background-color: #000
+    z-index: 10
 
-.pricing__wrapper
-    margin: 0 auto
-    padding: 50px 15px
-    max-width: 1170px
-
-.pricing__title
-    padding: 54px 0
-    font-size: 36px
-    text-align: center
-    line-height: 42px
-    font-family: 'Raleway', sans-serif
-    font-weight: 400
-    text-transform: uppercase
-
-.pricing__separator
-    width: 170px
-    height: 0
-    margin: 0 auto
-    border: none
-    border-top: solid 1px #EC7979
-
-.pricing__subtitle
-    padding: 40px 0 79px
-    color: #86878B
-    font-size: 18px
-    text-align: center
-    font-family: 'Raleway', sans-serif
-    font-weight: 400
-    line-height: 21px
-
-.pricing__content 
+.menu__wrapper
+    margin: 0 115px
     display: flex
     justify-content: space-between
-    text-align: center
 
-.pricing__item
+.menu__logo
+    width: 183px
+    height: 75px
+    background-image: url(../img/axit_logo.png)
+    background-repeat: no-repeat
+
+.menu__links
+    width: 570px
     display: flex
-    flex-basis: 370px
-    flex-direction: column
-    justify-content: flex-start
 
-.pricing__item
-    &:hover 
-        cursor: pointer
-        margin-top: -20px
-        transition: all 0.5s ease-in-out
-        filter: drop-shadow(0 4px 10px #d6d6d6)
-
-.pricing__item-title
+.menu__link
+    flex: 0 0 114px
     color: #fff
-    margin: 1px 0
-    padding: 13px 0
-    font-size: 24px
+    font-size: 14px
     font-family: 'Open Sans', sans-serif
-    font-weight: bold
-    line-height: 32px
-    border: 1px solid #f5f5f5
-    background-color: #333
+    font-weight: 600
+    line-height: 75px
+    text-align: center
+    text-decoration: none
+    text-transform: uppercase
+    transition: all 0.3s
 
-.pricing__item-cost
-    color: #fff
-    margin: 1px 0
-    padding: 28px 0
-    font-size: 36px
-    font-family: 'Raleway', sans-serif
-    font-weight: bold
-    line-height: 42px
-    border: 1px solid #f5f5f5
-    background-color: #333
+    &:hover
+        background-color: #ec7979
 
-.pricing__item-description
-    margin: 1px 0
-    padding: 12px 0
-    color: #999
-    font-size: 18px
-    font-family: 'Raleway', sans-serif
-    font-weight: normal
-    line-height: 22px
-    border: 2px solid #f5f5f5
-    background-color: #333
+    &:active
+        background-color: #ab4949
 
-.pricing__list-item
-    margin: 0 1px 1px 1px
-    padding: 12px 0
-    color: #86878b
-    font-size: 18px
-    font-family: 'Raleway', sans-serif
-    font-weight: normal
-    line-height: 22px
-    text-transform: capitalize
-    border: 2px solid #f5f5f5
-    border-top: none
-    background-color: #fff
+.menu__burger
+    display: none
+
+@media (max-width: 1024px)
+    .menu__wrapper
+        margin: 0 20px 0 20px
+
+    .menu__links
+        width: 570px
+        display: flex
+
+    .menu__burger
+        display: none
+
+@media (max-width: 768px)
+    .menu
+        height: 56px
+
+    .menu--is-opened
+        .menu__burger
+            background-image: url(../img/menu_close.png)
+
+        .menu__links
+            top: 56px
+            left: 0
+            right: 0
+            bottom: 0
+            width: 100%
+            display: flex
+            position: fixed
+            flex-direction: column
+            background-color: #000
+            z-index: 10
+
+            .menu__link
+                flex: 0 0 67px
+                margin: 0 20px
+                font-size: 14px
+                line-height: 67px
+
+    .menu__logo
+        width: 130px
+        height: 56px
+        background-size: 130px 56px
+
+    .menu__links
+        display: none
+
+    .menu__burger
+        top: 0
+        width: 55px
+        height: 56px
+        display: block
+        right: 20px
+        position: absolute
+        cursor: pointer
+        background-repeat: no-repeat
+        background-position: center center
+        background-image: url(../img/menu_burger.png)
+
+
