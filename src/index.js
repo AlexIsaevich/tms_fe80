@@ -1,1 +1,5 @@
-console.log("js here");
+if (module.hot) {
+    module.hot.accept();
+  }
+
+  
