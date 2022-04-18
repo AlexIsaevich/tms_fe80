@@ -1,0 +1,91 @@
+/* fonts */
+@import url("fonts.css");
+
+/* reset */
+html, body, h1, h2, h3, h4, h5, h6, p, hr {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+.grid-container {
+    margin: 0 auto;
+    padding-top: 100px
+}
+
+.grid-container-1 {
+    display: grid;
+    justify-content: center;
+    grid-template-rows: 5em 200px 200px;
+    grid-template-columns: 200px 5em 50%;
+}
+
+.grid-container-1 div {
+    border: solid blue 1px;
+}
+
+.grid-container-2 {
+    display: grid;
+    justify-content: center;
+    grid-template-areas: 'header header'
+                        'sidebar content'
+                        'sidebar content';
+    grid-template-rows: 150px 1fr;
+    grid-template-columns: 50px 1fr 50px;
+
+}
+
+.grid-container-2 header {
+    border: solid yellow 1px;
+    grid-area: header;
+}
+
+.grid-container-2 aside {
+    border: solid green 1px;
+    grid-area: sidebar;
+}
+
+.grid-container-2 main {
+    border: solid purple 1px;
+    grid-area: content;
+}
+
+.grid-container-3 {
+    display: grid;
+    justify-content: center;
+    grid-template-areas: 'header header header'
+                        'article main nav'
+                        'footer footer footer';
+    grid-template-rows: repeat(3, 200px);
+    grid-template-columns: repeat(3, 25%);
+}
+
+.grid-container-3 header {
+    border: solid yellow 1px;
+    grid-area: header;
+}
+
+.grid-container-3 article {
+    border: solid green 1px;
+    grid-area: article;
+}
+
+.grid-container-3 main {
+    border: solid purple 1px;
+    grid-area: main;
+}
+
+.grid-container-3 nav {
+    border: solid purple 1px;
+    grid-area: nav;
+}
+
+.grid-container-3 footer {
+    border: solid red 1px;
+    grid-area: footer;
+}
+
+
