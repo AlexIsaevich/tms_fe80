@@ -1,0 +1,140 @@
+/* fonts */
+@import url("fonts.css");
+
+/* reset */
+html, body, h1, h2, h3, h4, h5, h6, p, hr {
+    margin: 0;
+    padding: 0;
+}
+
+.container-1 div {
+    margin: 20px auto;
+    width: 200px;
+    color: #fff;
+    padding: 20px;
+    background-color: purple;
+}
+
+.container-1 .full:hover {
+    transition-property: background-color;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    transition-delay: 0;
+    background-color: pink;
+}
+
+.container-1 .short:hover {
+    transition: background-color 1s ease 0s;
+    background-color: pink;
+}
+
+.container-2 div {
+    margin: 20px auto;
+    width: 200px;
+    color: #fff;
+    padding: 20px;
+    background-color: green;
+}
+
+.container-2 div:hover {
+    transition: background-color 0.3s ease, color 1s linear;
+    color: #000;
+    background-color: lime;
+}
+
+@keyframes shadow {
+    from {
+        text-shadow: 0 0 3px #000;
+    }
+
+    50% {
+        text-shadow: 0 0 30px #000;
+    }
+
+    to {
+        text-shadow: 0 0 3px #000;
+    }
+}
+
+@keyframes move {
+    from, to { 
+        top: 0;
+        left: 0;
+    }
+
+    25%, 75% {
+        top: 100%;
+    }
+
+    50% {
+        top: 50%;
+    }
+}
+
+@keyframes move-orange {
+    from, to { 
+        left: 0;
+        right: 0;
+    }
+
+    25% {
+        left: 25%;
+    }
+
+    50% {
+        left: 50%;
+    }
+
+    75% {
+        left: 75%;
+    }
+}
+
+
+.container-3 {
+    position: relative;
+}
+
+.container-3 div {
+    margin: 20px auto;
+    width: 200px;
+    color: #000;
+    padding: 20px;
+}
+
+.container-3 .shadowed-text {
+    border: #000 solid 5px;
+    animation: shadow 2s infinite ease-in-out;
+}
+
+.container-3 .moving-item {
+    right: 0;
+    margin-top: 100px;
+    border: none;
+    position: absolute;
+    background-color: gold;
+    animation: move 2s infinite ease-in-out;
+}
+
+.container-4 {
+    position: relative;
+}
+
+.container-4 div {
+    margin: 20px auto;
+    width: 200px;
+    color: #000;
+    padding: 20px;
+}
+
+.container-4 .moving-orange {
+    margin-top: 200px;
+    border: none;
+    position: absolute;
+    background-color: orange;
+    animation: move-orange 2s infinite linear;
+}
+
+
+
+

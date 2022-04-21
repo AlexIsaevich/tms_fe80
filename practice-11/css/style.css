@@ -19,8 +19,8 @@ html, body, h1, h2, h3, h4, h5, h6, p, hr {
 .grid-container-1 {
     display: grid;
     justify-content: center;
-    grid-template-rows: 5em 200px 200px;
-    grid-template-columns: 200px 5em 50%;
+    grid-template-rows: repeat(5, 200px);
+    grid-template-columns: repeat(4, 25%);
 }
 
 .grid-container-1 div {
@@ -34,8 +34,7 @@ html, body, h1, h2, h3, h4, h5, h6, p, hr {
                         'sidebar content'
                         'sidebar content';
     grid-template-rows: 150px 1fr;
-    grid-template-columns: 50px 1fr 50px;
-
+    grid-template-columns: 150px 1fr;
 }
 
 .grid-container-2 header {
