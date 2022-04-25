@@ -18,13 +18,13 @@ html, body, h1, h2, h3, h4, h5, h6, p, hr {
 .container-1 .full:hover {
     transition-property: background-color;
     transition-duration: 1s;
-    transition-timing-function: ease;
-    transition-delay: 0;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
     background-color: pink;
 }
 
 .container-1 .short:hover {
-    transition: background-color 1s ease 0s;
+    transition: background-color 1s ease-in 0s;
     background-color: pink;
 }
 
@@ -47,9 +47,18 @@ html, body, h1, h2, h3, h4, h5, h6, p, hr {
         text-shadow: 0 0 3px #000;
     }
 
+    25% {
+        text-shadow: 0 0 10px red;
+    }
+
     50% {
         text-shadow: 0 0 30px #000;
     }
+
+    75% {
+        text-shadow: 0 0 10px red;
+    }
+
 
     to {
         text-shadow: 0 0 3px #000;
@@ -104,7 +113,7 @@ html, body, h1, h2, h3, h4, h5, h6, p, hr {
 
 .container-3 .shadowed-text {
     border: #000 solid 5px;
-    animation: shadow 2s infinite ease-in-out;
+    animation: shadow 3s infinite step-start;
 }
 
 .container-3 .moving-item {
@@ -132,7 +141,15 @@ html, body, h1, h2, h3, h4, h5, h6, p, hr {
     border: none;
     position: absolute;
     background-color: orange;
-    animation: move-orange 2s infinite linear;
+    animation: move-orange 2s infinite ease-in-out;
+}
+
+.container-4 .moving-orange:hover {
+    margin-top: 200px;
+    border: none;
+    position: absolute;
+    background-color: orange;
+    animation-play-state: paused;
 }
 
 

@@ -1,0 +1,23 @@
+.container {
+    padding: 20px 0;
+}
+
+.container-2 div {
+    border: solid blue 1px;
+}
+
+.container-3 div {
+    border: solid green 1px;
+}
+
+.container-4 div {
+    border: solid orange 1px;
+}
+
+.container-5 div {
+    border: solid purple 1px;
+}
+
+.container-6 div {
+    border: solid brown 1px;
+}
